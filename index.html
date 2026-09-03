@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="page-header">
+    <h1>My Budget Tracker</h1>
+    <p>Track your income and expenses in one place.</p>
+  </header>
+
+  <main>
+    <section class="expense-section" aria-labelledby="add-expense-heading">
+      <h2 id="add-expense-heading">Add Expense</h2>
+      <form>
+        <label for="expense-name">Expense name</label>
+        <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries">
+
+        <label for="expense-amount">Amount</label>
+        <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g. 25.00" min="0" step="0.01">
+
+        <label for="expense-category">Category</label>
+        <input type="text" id="expense-category" name="expense-category" placeholder="e.g. Food">
+      </form>
+    </section>
+
+    <section id="expenses-placeholder" aria-labelledby="your-expenses-heading">
+      <h2 id="your-expenses-heading">Your Expenses</h2>
+      <p>No expenses yet.</p>
+    </section>
+  </main>
+</body>
+</html>
