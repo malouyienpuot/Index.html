@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  color: #243047;
+  background-color: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+#page-header {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  padding: 2rem;
+  color: #ffffff;
+  background-color: #315c9b;
+  border-radius: 12px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.expense-section {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #d9e2f2;
+  border-radius: 12px;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #aebdd4;
+  border-radius: 6px;
+  font: inherit;
+}
+
+#expenses-placeholder {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #e8f5ed;
+  border: 2px solid #acd8bd;
+  border-radius: 12px;
+}
