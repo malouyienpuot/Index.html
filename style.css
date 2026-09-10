@@ -20,6 +20,11 @@ body {
   text-align: center;
 }
 
+#page-header img {
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
 h1,
 h2 {
   margin-top: 0;
@@ -39,11 +44,16 @@ form {
   gap: 0.5rem;
 }
 
+.expense-section > form {
+  margin-top: 1rem;
+}
+
 label {
   font-weight: bold;
 }
 
-input {
+input,
+select {
   width: 100%;
   margin-bottom: 0.75rem;
   padding: 0.75rem;
@@ -52,11 +62,86 @@ input {
   font: inherit;
 }
 
-#expenses-placeholder {
+.expense-section input:not([type="submit"]),
+.expense-section select {
+  background-color: #fbfcff;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid #a9c7f5;
+  border-color: #315c9b;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background-color: #315c9b;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #244675;
+}
+
+.expenses-section,
+.learning-section,
+.video-section {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
   padding: 2rem;
   background-color: #e8f5ed;
   border: 2px solid #acd8bd;
   border-radius: 12px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.expenses-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.expenses-section th,
+.expenses-section td {
+  padding: 0.75rem;
+  border: 1px solid #acd8bd;
+  text-align: left;
+}
+
+.expenses-section th {
+  color: #ffffff;
+  background-color: #315c9b;
+}
+
+.expenses-section tr:nth-child(even) {
+  background-color: #f1f7f3;
+}
+
+.expenses-section tbody tr:hover {
+  background-color: #d8eddf;
+}
+
+.learning-section,
+.video-section {
+  background-color: #ffffff;
+  border-color: #d9e2f2;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.video-section iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
 }

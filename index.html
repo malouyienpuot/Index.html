@@ -8,6 +8,7 @@
 </head>
 <body>
   <header id="page-header">
+    <img src="https://img.icons8.com/color/96/000000/money-bag.png" alt="Money bag logo" width="72">
     <h1>My Budget Tracker</h1>
     <p>Track your income and expenses in one place.</p>
   </header>
@@ -15,21 +16,96 @@
   <main>
     <section class="expense-section" aria-labelledby="add-expense-heading">
       <h2 id="add-expense-heading">Add Expense</h2>
-      <form>
+      <form id="expense-form">
         <label for="expense-name">Expense name</label>
-        <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries">
+        <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries" required>
 
         <label for="expense-amount">Amount</label>
-        <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g. 25.00" min="0" step="0.01">
+        <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g. 25.00" min="0" step="0.01" required>
 
         <label for="expense-category">Category</label>
-        <input type="text" id="expense-category" name="expense-category" placeholder="e.g. Food">
+        <select id="expense-category" name="expense-category" required>
+          <option value="" selected disabled>Choose a category</option>
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="rent">Rent</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="expense-date">Date</label>
+        <input type="date" id="expense-date" name="expense-date" required>
+
+        <button type="button">Add Expense</button>
       </form>
     </section>
 
-    <section id="expenses-placeholder" aria-labelledby="your-expenses-heading">
+    <section class="expenses-section" aria-labelledby="your-expenses-heading">
       <h2 id="your-expenses-heading">Your Expenses</h2>
-      <p>No expenses yet.</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Category</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Groceries</td>
+              <td>$52.40</td>
+              <td>Food</td>
+              <td>2026-09-01</td>
+            </tr>
+            <tr>
+              <td>Bus pass</td>
+              <td>$30.00</td>
+              <td>Transport</td>
+              <td>2026-09-03</td>
+            </tr>
+            <tr>
+              <td>Monthly rent</td>
+              <td>$850.00</td>
+              <td>Rent</td>
+              <td>2026-09-05</td>
+            </tr>
+            <tr>
+              <td>Movie tickets</td>
+              <td>$24.00</td>
+              <td>Entertainment</td>
+              <td>2026-09-07</td>
+            </tr>
+            <tr>
+              <td>Coffee</td>
+              <td>$4.50</td>
+              <td>Food</td>
+              <td>2026-09-09</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="learning-section" aria-labelledby="learning-heading">
+      <details>
+        <summary id="learning-heading">How to use this tracker</summary>
+        <p>Enter an expense name, amount, category, and date in the form above. The Add Expense button will become interactive in a future version.</p>
+      </details>
+    </section>
+
+    <section class="video-section" aria-labelledby="video-heading">
+      <h2 id="video-heading">Budgeting Tip</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/2mI7G1wYb8Q"
+        title="Budgeting tips video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </section>
   </main>
 </body>
