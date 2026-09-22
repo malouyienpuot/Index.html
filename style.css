@@ -46,6 +46,11 @@ section {
   border: 2px solid #93c5fd;
 }
 
+#budget-section {
+  background-color: #fef3c7;
+  border: 2px solid #fcd34d;
+}
+
 #your-expenses {
   background-color: #dcfce7;
   border: 2px solid #86efac;
@@ -81,6 +86,40 @@ input {
 input:focus {
   outline: 3px solid #bfdbfe;
   border-color: #2563eb;
+}
+
+button {
+  width: fit-content;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+#expense-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+}
+
+#expense-list li:not(.empty-state) {
+  margin-bottom: 0.5rem;
+}
+
+.summary {
+  padding-top: 1rem;
+  border-top: 1px solid #86efac;
+}
+
+.summary p {
+  margin: 0.35rem 0;
 }
 
 .empty-state {
